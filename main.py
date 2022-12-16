@@ -24,7 +24,7 @@ screen.onkey(snake.right, 'Right')
 game_is_on = True
 while game_is_on:
     screen.update()
-    time.sleep(0.125)
+    time.sleep(snake.move_speed)
     snake.move()
 
     # Detect collision with food.
