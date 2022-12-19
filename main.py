@@ -29,6 +29,12 @@ while game_is_on:
 
     # Detect collision with food.
     if snake.head.distance(food) < 15:
+        if scoreboard.score % 3 == 0:
+            food.color('#C9C9C9')
+            food.shapesize(stretch_len=0.5, stretch_wid=0.5)
+        else:
+            food.color('#76A86E')
+            food.shapesize(stretch_len=0.6, stretch_wid=0.6)
         food.refresh()
         snake.extend()
         scoreboard.increase_score()
