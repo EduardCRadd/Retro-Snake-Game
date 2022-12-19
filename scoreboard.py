@@ -29,8 +29,5 @@ class Scoreboard(Turtle):
         self.update_scoreboard()
 
     def increase_score(self):
-        if self.score % 3 == 0:
-            self.score += 2
-        else:
-            self.score += 1
+        self.score += 1
         self.update_scoreboard()
